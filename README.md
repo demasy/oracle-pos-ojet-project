@@ -1,2 +1,2 @@
-# oracle-pos-ojet-project-
+# Oracle POS Project
 Oracle POS Project by Oracle Jet
