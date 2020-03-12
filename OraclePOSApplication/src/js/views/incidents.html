@@ -3,8 +3,36 @@
  The Universal Permissive License (UPL), Version 1.0
  -->
 <div class="oj-hybrid-padding">
-  <h1>Incidents Content Area</h1>
-  <div>
-      To change the content of this section, you will make edits to the incidents.html file located in the /js/views folder.
-  </div>
+  <h1>Point of Sale: Store</h1>
+  <oj-form-layout id="storeForm">
+    <!-- Country Code -->
+    <oj-label for="countryCode">Country Code</oj-label>
+    <oj-input-text id="countryCode" aria-label="Country Code" placeholder="Country Code" length.max="3" required="true">
+    </oj-input-text>
+    <!-- Short Name -->
+    <oj-label for="shortName">Short Name</oj-label>
+    <oj-input-text id="shortName" aria-label="Store Short Name" placeholder="Store Short Name" required="true">
+    </oj-input-text>
+    <!-- Store Name -->
+    <oj-label for="storeName">Store Name</oj-label>
+    <oj-input-text id="storeName" aria-label="Store Name" placeholder="Store Name" required="true"></oj-input-text>
+    <!-- Start Date -->
+    <oj-label for="startDate">Start Date</oj-label>
+    <oj-input-date id="startDate" label-hint="input date time" required="true"></oj-input-date>
+    <!-- End Date -->
+    <oj-label for="endDate">End Date</oj-label>
+    <oj-input-date id="endDate" label-hint="input date time"></oj-input-date>
+    <!-- Enabled Flag -->
+    <oj-label for="enabledFlag">Enabled Flag</oj-label>
+    <oj-combobox-one id="enabledFlag" label-hint="disabled option item" style="max-width:10em" value="Y">
+      <oj-option value="Y">Yes</oj-option>
+      <oj-option value="N" disabled="true">No</oj-option>
+    </oj-combobox-one>
+    <!-- Description -->
+    <oj-label for="description">Description</oj-label>
+    <oj-text-area id="description" label-hint="enabled" rows="5">
+    </oj-text-area>
+  </oj-form-layout>
+
+
 </div>

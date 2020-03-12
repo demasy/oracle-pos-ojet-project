@@ -7,8 +7,19 @@
 /*
  * Your incidents ViewModel code goes here
  */
-define(['accUtils'],
- function(accUtils) {
+define(
+  [
+   'accUtils',
+   'ojs/ojcore',
+   'knockout',
+   'jquery',
+   'ojs/ojknockout',
+   'ojs/ojformlayout',
+   'ojs/ojinputtext',
+   'ojs/ojdatetimepicker',
+   'ojs/ojselectcombobox'
+  ],
+  function (accUtils) {
 
     function IncidentsViewModel() {
       var self = this;
@@ -23,7 +34,7 @@ define(['accUtils'],
        * and inserted into the DOM and after the View is reconnected
        * after being disconnected.
        */
-      self.connected = function() {
+      self.connected = function () {
         accUtils.announce('Incidents page loaded.', 'assertive');
         document.title = "Incidents";
         // Implement further logic if needed
@@ -32,7 +43,7 @@ define(['accUtils'],
       /**
        * Optional ViewModel method invoked after the View is disconnected from the DOM.
        */
-      self.disconnected = function() {
+      self.disconnected = function () {
         // Implement if needed
       };
 
@@ -40,7 +51,7 @@ define(['accUtils'],
        * Optional ViewModel method invoked after transition to the new View is complete.
        * That includes any possible animation between the old and the new View.
        */
-      self.transitionCompleted = function() {
+      self.transitionCompleted = function () {
         // Implement if needed
       };
     }
