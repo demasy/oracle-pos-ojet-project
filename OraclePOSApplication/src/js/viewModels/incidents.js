@@ -9,20 +9,25 @@
  */
 define(
   [
-   'accUtils',
-   'ojs/ojcore',
-   'knockout',
-   'jquery',
-   'ojs/ojknockout',
-   'ojs/ojformlayout',
-   'ojs/ojinputtext',
-   'ojs/ojdatetimepicker',
-   'ojs/ojselectcombobox'
+    'accUtils',
+    'knockout', 'ojs/ojbootstrap', 'ojs/ojarraydataprovider', 'ojs/ojknockout', 'ojs/ojselectsingle'
   ],
-  function (accUtils) {
+  function (accUtils, ko, Bootstrap, ArrayDataProvider) {
+
 
     function IncidentsViewModel() {
       var self = this;
+
+      self.selectedCountryValue = ko.observable('EG');
+
+
+      var countries = [
+        { value: 'EG', label: 'Egypt' },
+        { value: 'SA', label: 'Saudi Arabia' },
+        { value: 'US', label: 'United States' }
+      ];
+
+      self.countriesData = new ArrayDataProvider(countries, { keyAttributes: 'value' });
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 
@@ -39,6 +44,9 @@ define(
         document.title = "Incidents";
         // Implement further logic if needed
       };
+
+
+
 
       /**
        * Optional ViewModel method invoked after the View is disconnected from the DOM.

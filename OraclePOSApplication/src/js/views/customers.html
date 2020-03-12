@@ -3,8 +3,12 @@
  The Universal Permissive License (UPL), Version 1.0
  -->
 <div class="oj-hybrid-padding">
-  <h1>Customers Content Area</h1>
-  <div>
-      To change the content of this section, you will make edits to the customers.html file located in the /js/views folder.
-  </div>
+  <oj-form-layout max-columns="1" direction="row">
+    <oj-label for="access">Permission Access </oj-label>
+    <oj-checkboxset class='oj-choice-direction-row' id="access" value='["C"]' label-hint="Permission Access"
+      label-hint="Enabled" help-hints.definition="help-hints.definition text">
+      <oj-option value="C">Create</oj-option>
+      <oj-option value="U">Update</oj-option>
+      <oj-option value="D">Delete</oj-option>
+    </oj-checkboxset>
 </div>

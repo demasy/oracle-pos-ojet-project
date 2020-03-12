@@ -7,7 +7,7 @@
 /*
  * Your customer ViewModel code goes here
  */
-define(['accUtils'],
+define(['accUtils' ,'ojs/ojcheckboxset', 'ojs/ojlabel', 'ojs/ojformlayout'],
  function(accUtils) {
 
     function CustomerViewModel() {

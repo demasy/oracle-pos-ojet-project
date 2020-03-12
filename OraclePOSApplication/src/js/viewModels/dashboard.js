@@ -12,24 +12,18 @@ define(
     'accUtils'
     , 'ojs/ojcore'
     , 'knockout'
-    , 'jquery'
+    , 'jquery','ojs/ojbootstrap','ojs/ojarraydataprovider',
     , 'ojs/ojknockout'
     , 'ojs/ojformlayout'
     , 'ojs/ojinputtext'
     , 'ojs/ojdatetimepicker'
     , 'ojs/ojselectcombobox'
     , 'ojs/ojselectsingle'
-    // , 'ojs/ojbootstrap'
-    // , 'ojs/ojarraydataprovider'
+
   ]
   ,
   function (
-    accUtils
-    , oj
-    , ko
-    , $
-    // , Bootstrap
-    // , ArrayDataProvider
+    accUtils, oj, ko, $, Bootstrap, ArrayDataProvider
   ) {
 
     function DashboardViewModel() {
@@ -37,17 +31,14 @@ define(
       var self = this;
 
       self.countryCode = ko.observable("EG");
+      self.selectedCountryValue = ko.observable('EG');
+      var countries = [
+        { value: 'EG', label: 'Egypt' },
+        { value: 'SA', label: 'Saudi Arabia' },
+        { value: 'US', label: 'United States' }
+      ];
 
-      // var countries = [
-      //   { value: 'IE', label: 'Internet Explorer' },
-      //   { value: 'FF', label: 'Firefox' },
-      //   { value: 'CH', label: 'Chrome' },
-      //   { value: 'OP', label: 'Opera' },
-      //   { value: 'SA', label: 'Safari' }
-      // ];
-
-      // self.countriesList = new ArrayDataProvider(countries, { keyAttributes: 'value' });
-
+      self.countriesData = new ArrayDataProvider(countries, { keyAttributes: 'value' });
 
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
