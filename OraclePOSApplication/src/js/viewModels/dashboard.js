@@ -40,6 +40,10 @@ define(
 
       self.countriesData = new ArrayDataProvider(countries, { keyAttributes: 'value' });
 
+      self.testValue = ko.observable();
+      self.countryXValue = ko.observable();
+
+ self.buttonClick = ko.observable();
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 

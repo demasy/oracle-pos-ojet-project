@@ -6,37 +6,54 @@
   <h1>Point of Sale: Store</h1>
   <oj-form-layout id="storeForm">
     <!-- Country Code -->
- 
+
     <oj-label for="country">Country</oj-label>
-    <oj-select-single id="country" style="max-width:12em"  data="[[countriesData]]" value="{{selectedCountryValue}}">
+    <oj-select-single id="country" style="max-width:12em" data="[[countriesData]]" value="{{selectedCountryValue}}">
     </oj-select-single>
 
-      <!-- Country Code -->
-      <!-- <oj-label for="countryCode">Country Code</oj-label>
+    <!-- Country Code -->
+    <!-- <oj-label for="countryCode">Country Code</oj-label>
       <oj-input-text id="countryCode" aria-label="Country Code" placeholder="Country Code" length.max="3"
         required="true" value="[[countryCode]]"> </oj-input-text> -->
-      <!-- Short Name -->
-      <oj-label for="shortName">Short Name</oj-label>
-      <oj-input-text id="shortName" aria-label="Store Short Name" placeholder="Store Short Name" required="true">
-      </oj-input-text>
-      <!-- Store Name -->
-      <oj-label for="storeName">Store Name</oj-label>
-      <oj-input-text id="storeName" aria-label="Store Name" placeholder="Store Name" required="true"></oj-input-text>
-      <!-- Start Date -->
-      <oj-label for="startDate">Start Date</oj-label>
-      <oj-input-date id="startDate" label-hint="input date time" required="true"></oj-input-date>
-      <!-- End Date -->
-      <oj-label for="endDate">End Date</oj-label>
-      <oj-input-date id="endDate" label-hint="input date time"></oj-input-date>
-      <!-- Enabled Flag -->
-      <oj-label for="enabledFlag">Enabled Flag</oj-label>
-      <oj-combobox-one id="enabledFlag" label-hint="disabled option item" style="max-width:10em" value="Y">
-        <oj-option value="Y">Yes</oj-option>
-        <oj-option value="N" disabled="true">No</oj-option>
-      </oj-combobox-one>
-      <!-- Description -->
-      <oj-label for="description">Description</oj-label>
-      <oj-text-area id="description" label-hint="enabled" rows="5">
-      </oj-text-area>
+    <!-- Short Name -->
+    <oj-label for="shortName">Short Name</oj-label>
+    <oj-input-text id="shortName" aria-label="Store Short Name" placeholder="Store Short Name" required="true">
+    </oj-input-text>
+    <!-- Store Name -->
+    <oj-label for="storeName">Store Name</oj-label>
+    <oj-input-text id="storeName" aria-label="Store Name" placeholder="Store Name" required="true"></oj-input-text>
+    <!-- Start Date -->
+    <oj-label for="startDate">Start Date</oj-label>
+    <oj-input-date id="startDate" label-hint="input date time" required="true"></oj-input-date>
+    <!-- End Date -->
+    <oj-label for="endDate">End Date</oj-label>
+    <oj-input-date id="endDate" label-hint="input date time"></oj-input-date>
+    <!-- Enabled Flag -->
+    <oj-label for="enabledFlag">Enabled Flag</oj-label>
+    <oj-combobox-one id="enabledFlag" label-hint="disabled option item" style="max-width:10em" value="Y">
+      <oj-option value="Y">Yes</oj-option>
+      <oj-option value="N" disabled="true">No</oj-option>
+    </oj-combobox-one>
+    <!-- Description -->
+    <oj-label for="description">Description</oj-label>
+    <oj-text-area id="description" label-hint="enabled" rows="5">
+    </oj-text-area>
+
+
+
   </oj-form-layout>
+  <!-- "ojComponent:{component:'oj-checkboxset',value:'testValue'}" -->
+
+  <!-- <label id="grouplabel">Time</label>
+  <div id="checkboxset" data-bind="ojComponent: {component: 'ojCheckboxset', value: ['night']}
+    aria-labelledby="grouplabel" >
+    <input id="morningid" value="morning" type="checkbox" name="time"/>
+    <label for="morningid"/>Morning</label>
+    <input id="nightid" value="night" type="checkbox" name="time"/>
+    <label for="nightid"/>Night</label>
+  <div> -->
+  <div id="button-container">
+    <oj-button id='apply' on-oj-action='[[buttonClick]]'>Apply</oj-button>
+    <oj-button id='apply'>Cancel</oj-button>
+  </div>
 </div>
