@@ -3,57 +3,87 @@
  The Universal Permissive License (UPL), Version 1.0
  -->
 <div class="oj-hybrid-padding">
-  <h1>Point of Sale: Store</h1>
-  <oj-form-layout id="storeForm">
-    <!-- Country Code -->
 
-    <oj-label for="country">Country</oj-label>
-    <oj-select-single id="country" style="max-width:12em" data="[[countriesData]]" value="{{selectedCountryValue}}">
-    </oj-select-single>
+  <div id="form-store-container">
+    <h1>Point of Sale: Store</h1>
+    <oj-form-layout id="storeForm">
+      <!-- Country Code -->
+      <oj-label for="country">Country</oj-label>
+      <oj-select-single id="country" style="max-width:12em" data="[[countriesData]]" value="{{selectedCountryValue}}">
+      </oj-select-single>
+      <!-- Short Name -->
+      <oj-label for="shortName">Short Name</oj-label>
+      <oj-input-text id="shortName" aria-label="Store Short Name" placeholder="Store Short Name" required="true">
+      </oj-input-text>
+      <!-- Store Name -->
+      <oj-label for="storeName">Store Name</oj-label>
+      <oj-input-text id="storeName" aria-label="Store Name" placeholder="Store Name" required="true"></oj-input-text>
+      <!-- Start Date -->
+      <oj-label for="startDate">Start Date</oj-label>
+      <oj-input-date id="startDate" label-hint="input date time" required="true"></oj-input-date>
+      <!-- End Date -->
+      <oj-label for="endDate">End Date</oj-label>
+      <oj-input-date id="endDate" label-hint="input date time"></oj-input-date>
+      <!-- Enabled Flag -->
+      <oj-label for="enabledFlag">Enabled Flag</oj-label>
+      <oj-combobox-one id="enabledFlag" label-hint="disabled option item" style="max-width:10em" value="Y">
+        <oj-option value="Y">Yes</oj-option>
+        <oj-option value="N" disabled="true">No</oj-option>
+      </oj-combobox-one>
+      <!-- Description -->
+      <oj-label for="description">Description</oj-label>
+      <oj-text-area id="description" label-hint="enabled" rows="5" labelled-by="Enter Your Notes">
+      </oj-text-area>
+    </oj-form-layout>
 
-    <!-- Country Code -->
-    <!-- <oj-label for="countryCode">Country Code</oj-label>
-      <oj-input-text id="countryCode" aria-label="Country Code" placeholder="Country Code" length.max="3"
-        required="true" value="[[countryCode]]"> </oj-input-text> -->
-    <!-- Short Name -->
-    <oj-label for="shortName">Short Name</oj-label>
-    <oj-input-text id="shortName" aria-label="Store Short Name" placeholder="Store Short Name" required="true">
-    </oj-input-text>
-    <!-- Store Name -->
-    <oj-label for="storeName">Store Name</oj-label>
-    <oj-input-text id="storeName" aria-label="Store Name" placeholder="Store Name" required="true"></oj-input-text>
-    <!-- Start Date -->
-    <oj-label for="startDate">Start Date</oj-label>
-    <oj-input-date id="startDate" label-hint="input date time" required="true"></oj-input-date>
-    <!-- End Date -->
-    <oj-label for="endDate">End Date</oj-label>
-    <oj-input-date id="endDate" label-hint="input date time"></oj-input-date>
-    <!-- Enabled Flag -->
-    <oj-label for="enabledFlag">Enabled Flag</oj-label>
-    <oj-combobox-one id="enabledFlag" label-hint="disabled option item" style="max-width:10em" value="Y">
-      <oj-option value="Y">Yes</oj-option>
-      <oj-option value="N" disabled="true">No</oj-option>
-    </oj-combobox-one>
-    <!-- Description -->
-    <oj-label for="description">Description</oj-label>
-    <oj-text-area id="description" label-hint="enabled" rows="5">
-    </oj-text-area>
+    <div id="store-button-container">
+      <oj-button id='apply' on-oj-action='[[buttonClick]]'>Apply</oj-button>
+      <oj-button id='cancel'>Cancel</oj-button>
+    </div>
+  </div>
 
 
+  <div id="form-branch-container">
+    <h1>Point of Sale: Branch</h1>
+    <oj-form-layout id="branch-form-layout">
+      <!-- Country Code -->
+      <oj-label for="branchCountry">Country</oj-label>
+      <oj-select-single id="branchCountry" style="max-width:12em" data="[[countriesData]]"
+        value="{{selectedCountryValue}}">
+      </oj-select-single>
+      <!-- Store Name -->
+      <oj-label for="storeName">Store Name</oj-label>
+      <oj-input-text id="storeName" aria-label="Store Name" placeholder="Store Name" required="true"></oj-input-text>
+      <!-- Short Name -->
+      <oj-label for="shortName">Short Name</oj-label>
+      <oj-input-text id="shortName" length.max="30" placeholder="Branch Short Name" required="true">
+      </oj-input-text>
+      <!-- Store Name -->
+      <oj-label for="branchName">Branch Name</oj-label>
+      <oj-input-text id="branchName" length.max="30" placeholder="User Branch Name" required="true"></oj-input-text>
+      <!-- Start Date -->
+      <oj-label for="startDate">Start Date</oj-label>
+      <oj-input-date id="startDate" label-hint="input date time" required="true"></oj-input-date>
+      <!-- End Date -->
+      <oj-label for="endDate">End Date</oj-label>
+      <oj-input-date id="endDate" label-hint="input date time"></oj-input-date>
+      <!-- Enabled Flag -->
+      <oj-label for="enabledFlag">Enabled Flag </oj-label>
+      <oj-radioset id="enabledFlag" class="oj-choice-direction-row" value="Y">
+        <oj-option id="yesOption" value="Y">Yes</oj-option>
+        <oj-option id="noOption" value="N">No</oj-option>
+      </oj-radioset>
+      <!-- Description -->
+      <oj-label for="description">Description</oj-label>
+      <oj-text-area id="description" label-hint="enabled" rows="5" labelled-by="Enter Your Notes">
+      </oj-text-area>
+    </oj-form-layout>
 
-  </oj-form-layout>
-  <!-- "ojComponent:{component:'oj-checkboxset',value:'testValue'}" -->
 
-  <!-- <label id="grouplabel">Time</label>
-  <div id="checkboxset" data-bind="ojComponent: {component: 'ojCheckboxset', value: ['night']}
-    aria-labelledby="grouplabel" >
-    <input id="morningid" value="morning" type="checkbox" name="time"/>
-    <label for="morningid"/>Morning</label>
-    <input id="nightid" value="night" type="checkbox" name="time"/>
-    <label for="nightid"/>Night</label>
-  <div> -->
-  <div id="button-container">
-    <oj-button id='apply' on-oj-action='[[buttonClick]]'>Apply</oj-button>
-    <oj-button id='apply'>Cancel</oj-button>
+    <div id="branch-button-container">
+      <oj-button id='apply' on-oj-action='[[buttonClick]]'>Apply</oj-button>
+      <oj-button id='cancel'>Cancel</oj-button>
+    </div>
+
   </div>
 </div>
