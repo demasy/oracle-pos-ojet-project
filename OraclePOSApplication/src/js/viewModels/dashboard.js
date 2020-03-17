@@ -18,7 +18,7 @@ define(
     , 'ojs/ojinputtext'
     , 'ojs/ojdatetimepicker'
     , 'ojs/ojselectcombobox'
-    , 'ojs/ojselectsingle','ojs/ojradioset'
+    , 'ojs/ojselectsingle','ojs/ojradioset','ojs/ojaccordion'
 
   ]
   ,
