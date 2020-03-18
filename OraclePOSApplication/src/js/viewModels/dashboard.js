@@ -12,13 +12,20 @@ define(
     'accUtils'
     , 'ojs/ojcore'
     , 'knockout'
-    , 'jquery','ojs/ojbootstrap','ojs/ojarraydataprovider',
+    , 'jquery'
+    , 'ojs/ojbootstrap'
+    , 'ojs/ojarraydataprovider'
     , 'ojs/ojknockout'
     , 'ojs/ojformlayout'
     , 'ojs/ojinputtext'
     , 'ojs/ojdatetimepicker'
     , 'ojs/ojselectcombobox'
-    , 'ojs/ojselectsingle','ojs/ojradioset','ojs/ojaccordion'
+    , 'ojs/ojselectsingle'
+    , 'ojs/ojradioset'
+    , 'ojs/ojaccordion'
+    , 'ojs/ojswitch'
+    , 'ojs/ojavatar'
+    , 'ojs/ojtable'
 
   ]
   ,
@@ -43,7 +50,78 @@ define(
       self.testValue = ko.observable();
       self.countryXValue = ko.observable();
 
- self.buttonClick = ko.observable();
+      self.buttonClick = ko.observable();
+
+
+      var storeArray = [
+        {
+          StoreId: 1,
+          StoreCountry: 'EG',
+          StoreShortName: 'ASEG',
+          StoreName: 'Apply Store - Egypt',
+          StoreDescription: 'Apply Store Egypt',
+          StoreEnabledFlag: 'Yes',
+          StoreStartDate: '13/11/1986',
+          StoreEndDate: ''
+        },
+        {
+          StoreId: 2,
+          StoreCountry: 'UAE',
+          StoreShortName: 'ASUEA',
+          StoreName: 'Apply Store - Emirates',
+          StoreDescription: 'Apply Store Emirates',
+          StoreEnabledFlag: 'Yes',
+          StoreStartDate: '13/11/1986',
+          StoreEndDate: ''
+        },
+        {
+          StoreId: 3,
+          StoreCountry: 'SA',
+          StoreShortName: 'ASSA',
+          StoreName: 'Apply Store - Saudi Arabia',
+          StoreDescription: 'Apply Store Saudi Arabia',
+          StoreEnabledFlag: 'Yes',
+          StoreStartDate: '13/11/1986',
+          StoreEndDate: ''
+        },
+        {
+          StoreId: 4,
+          StoreCountry: 'JO',
+          StoreShortName: 'ASJO',
+          StoreName: 'Apply Store - Jordan',
+          StoreDescription: 'Apply Store Jordan',
+          StoreEnabledFlag: 'Yes',
+          StoreStartDate: '13/11/1986',
+          StoreEndDate: ''
+        }, {
+          StoreId: 5,
+          StoreCountry: 'IQ',
+          StoreShortName: 'ASIQ',
+          StoreName: 'Apply Store - Iraq',
+          StoreDescription: 'Apply Store Iraq',
+          StoreEnabledFlag: 'Yes',
+          StoreStartDate: '13/11/1986',
+          StoreEndDate: ''
+        },
+        {
+          StoreId: 6,
+          StoreCountry: 'KW',
+          StoreShortName: 'ASKKW',
+          StoreName: 'Apply Store - Kuwait',
+          StoreDescription: 'Apply Store Kuwait',
+          StoreEnabledFlag: 'Yes',
+          StoreStartDate: '13/11/1986',
+          StoreEndDate: '01-OCT-16'
+        }
+      ]
+      self.dataprovider = new ArrayDataProvider(storeArray, { keyAttributes: 'StoreId' });
+
+
+
+
+
+
+
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 
