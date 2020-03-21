@@ -53,7 +53,7 @@ define(
       self.buttonClick = ko.observable();
 
 
-      var storeArray = [
+      var storeAllDataArray = [
         {
           StoreId: 1,
           StoreCountry: 'EG',
@@ -114,8 +114,8 @@ define(
           StoreEndDate: '01-OCT-16'
         }
       ]
-      self.dataprovider = new ArrayDataProvider(storeArray, { keyAttributes: 'StoreId' });
-
+      self.dataprovider = new ArrayDataProvider(storeAllDataArray, { keyAttributes: 'StoreId' });
+      self.storeAllData = new ArrayDataProvider(storeAllDataArray, { keyAttributes: 'StoreId' });
 
 
 
