@@ -3,15 +3,11 @@ const oracledb = require('oracledb');
 const dbConfig = require('./dbconfig.js');
 
 async function run() {
-
     let connection;
-
     try {
         // Get a non-pooled connections
         connection = await oracledb.getConnection(dbConfig);
-
         console.log('Connection was successful!');
-
     } catch (err) {
         console.error(err);
     } finally {
