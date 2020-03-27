@@ -1,6 +1,6 @@
 module.exports = {
     posPool: {
-        user: "POS",
+        user: "DL",
         password: "Roketto",
         connectString: "db.rokettohub.com/orcl",
         poolMin: 10,
