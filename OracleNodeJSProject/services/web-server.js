@@ -12,7 +12,7 @@ function initialize() {
         const app = express();
         httpServer = http.createServer(app);
     
-        app.use('/api', router);
+        app.use('/restapi/resources', router);
         app.get('/', async (req, res) => {
             const result = await database.simpleExecute('select user, systimestamp from dual');
             const user = result.rows[0].USER;

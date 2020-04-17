@@ -15,7 +15,7 @@ async function startup() {
 
         await database.initialize();
     } catch (err) {
-        console.error(err);
+        console.error("POS Error=> "+err);
 
         process.exit(1); // Non-zero failure code
     }
